@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CyberSecure Encryptor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>CyberSecure Encryptor</h1>
+  <p>Enhancing Data Security with AES and RSA Encryption</p>
+
+  <!-- Language Switcher -->
+  <select onchange="setLanguage(this.value)">
+    <option value="en">English</option>
+    <option value="ha">Hausa</option>
+    <option value="ig">Igbo</option>
+    <option value="yo">Yoruba</option>
+  </select>
+
+  <!-- AES Section -->
+  <section>
+    <h2>AES Encryption</h2>
+    <textarea id="aesPlain" placeholder="Plaintext"></textarea>
+    <input type="text" id="aesKey" placeholder="Secret Key">
+    <button onclick="encryptAES()">Encrypt</button>
+    <button onclick="decryptAES()">Decrypt</button>
+    <textarea id="aesCipher" placeholder="Ciphertext"></textarea>
+    <button onclick="saveEncryptedText()">Save Encrypted Text</button>
+    <button onclick="loadEncryptedText()">Load Encrypted Text</button>
+    <button onclick="speakText()">🔊 Read Message</button>
+  </section>
+
+  <!-- RSA Section -->
+  <section>
+    <h2>RSA Encryption</h2>
+    <textarea id="rsaPlain" placeholder="Plaintext"></textarea>
+    <button onclick="generateRSAKeys()">Generate RSA Keys</button>
+    <button onclick="encryptRSA()">Encrypt</button>
+    <textarea id="rsaCipher" placeholder="Ciphertext"></textarea>
+    <button onclick="decryptRSA()">Decrypt</button>
+  </section>
+
+  <!-- File Encryption -->
+  <h2>Encrypt/Decrypt Files (AES)</h2>
+  <input type="file" id="fileInput">
+  <button onclick="encryptFile()">Encrypt File</button>
+  <button onclick="decryptFile()">Decrypt File</button>
+  <a id="downloadLink" style="display:none;">Download</a>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/node-forge@0.10.0/dist/forge.min.js"></script>
+  <script src="script.js"></script>
+  <script src="lang.js"></script>
+</body>
+</html>
