@@ -1,0 +1,27 @@
+body {
+  background-color: #000822;
+  color: #0f0;
+  font-family: monospace;
+  text-align: center;
+}
+textarea, input {
+  width: 80%;
+  margin: 10px;
+  padding: 10px;
+  background: #001;
+  color: #0f0;
+  border: 1px solid #0f0;
+}
+button {
+  margin: 5px;
+  padding: 10px 20px;
+  background-color: #0f0;
+  color: #000;
+  border: none;
+  cursor: pointer;
+}
+section {
+  border: 1px solid #0f0;
+  padding: 20px;
+  margin: 20px;
+}
